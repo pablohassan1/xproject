@@ -1,0 +1,20 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: small;
+  }
+
+  th, td {
+    padding: 5px;  
+     
+    
+  }
+
+  .table {
+      margin: 30px;
+  }
+
+  .action  {   
+    display: flex; 
+    flex-flow: row;
+  }
