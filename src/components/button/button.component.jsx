@@ -5,7 +5,7 @@ import './button.css';
 const Button = props =>(
     
         <button 
-                className={props.color}
+                className={props.color + ' ' + props.class}
                 type={props.type}  
                 onClick={props.action}              
                 
