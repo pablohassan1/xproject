@@ -72,7 +72,7 @@ class App extends React.Component {
     this.setState({
       items: filteredItems
     })
-    axios.delete('https://enigmatic-scrubland-87375.herokuapp.com/records/' + myId, {data: {id: myId}}, config)
+    axios.delete('https://cors-anywhere.herokuapp.com/enigmatic-scrubland-87375.herokuapp.com/records/' + myId, {data: {id: myId}}, config)
       .then(res => console.log(res))
   }
 
