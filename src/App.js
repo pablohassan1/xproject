@@ -43,7 +43,7 @@ class App extends React.Component {
       }
     };
 
-    axios.post('https://enigmatic-scrubland-87375.herokuapp.com/records', {name , email, phone, myId: myId}, config)
+    axios.post('https://cors-anywhere.herokuapp.com/enigmatic-scrubland-87375.herokuapp.com/records', {name , email, phone, myId: myId}, config)
       .then(res => {                
         console.log(res);
         console.log(res.data);    
