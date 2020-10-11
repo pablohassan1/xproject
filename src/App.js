@@ -61,11 +61,18 @@ class App extends React.Component {
 
   
   deleteItem = myId => {
+    const config = {
+      headers: { 
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials':true
+      }
+    };
     const filteredItems= this.state.items.filter( item =>  item.myId!==myId);
     this.setState({
       items: filteredItems
     })
-    axios.delete('https://enigmatic-scrubland-87375.herokuapp.com/records/' + myId, {data: {id: myId}})
+    axios.delete('https://enigmatic-scrubland-87375.herokuapp.com/records/' + myId, {data: {id: myId}}, config)
       .then(res => console.log(res))
   }
 
