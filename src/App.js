@@ -65,13 +65,13 @@ class App extends React.Component {
     this.setState({
       items: filteredItems
     })
-    axios.delete('/records/' + myId, {data: {id: myId}})
+    axios.delete('https://cors-anywhere.herokuapp.com/enigmatic-scrubland-87375.herokuapp.com/records/' + myId, {data: {id: myId}})
       .then(res => console.log(res))
   }
 
   
     componentDidMount(){
-      axios.get('https://enigmatic-scrubland-87375.herokuapp.com/records')
+      axios.get('https://cors-anywhere.herokuapp.com/enigmatic-scrubland-87375.herokuapp.com/records')
           .then(res => {  
               console.log(res.data)          
               this.setState({items:res.data}); 
