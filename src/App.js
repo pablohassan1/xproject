@@ -72,9 +72,10 @@ class App extends React.Component {
   
     componentDidMount(){
       axios.get('/records')
-          .then(res => {            
-              this.setState({items:res.data});
-                         
+          .then(res => {  
+              console.log(res.data)          
+              this.setState({items:res.data}); 
+              console.log(this.state)                          
       })
     }
 
