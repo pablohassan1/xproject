@@ -43,7 +43,7 @@ class App extends React.Component {
       }
     };
 
-    axios.post('/records', {name , email, phone, myId: myId}, config)
+    axios.post('https://enigmatic-scrubland-87375.herokuapp.com/records', {name , email, phone, myId: myId}, config)
       .then(res => {                
         console.log(res);
         console.log(res.data);    
@@ -71,7 +71,7 @@ class App extends React.Component {
 
   
     componentDidMount(){
-      axios.get('/records')
+      axios.get('https://enigmatic-scrubland-87375.herokuapp.com/records')
           .then(res => {  
               console.log(res.data)          
               this.setState({items:res.data}); 
